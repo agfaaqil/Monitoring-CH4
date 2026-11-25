@@ -1,0 +1,282 @@
+
+/* ==============================
+   METHRA - SMART GAS MONITORING
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-green: #183D32;
+    --main-green: #245442;
+    --soft-green: #E8EFE8;
+    --sage: #B9CDBB;
+    --white: #FFFFFF;
+    --text-dark: #263B32;
+    --text-muted: #718078;
+    --border: #DDE6DE;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F2F5F1;
+    color: var(--text-dark);
+    min-height: 100vh;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+    padding: 25px;
+}
+
+/* HEADER */
+
+.header {
+    background: var(--dark-green);
+    color: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand h1 {
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.brand p {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--sage);
+    margin-top: 5px;
+}
+
+.connection {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #D7E8D9;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    background: #F0B84B;
+    border-radius: 50%;
+}
+
+/* WELCOME */
+
+.welcome {
+    margin: 30px 0 20px;
+}
+
+.welcome h2 {
+    font-size: 23px;
+    margin-bottom: 7px;
+}
+
+.welcome p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* MAIN CARD */
+
+.main-card {
+    background: var(--dark-green);
+    color: var(--white);
+    border-radius: 15px;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.card-label {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: var(--sage);
+}
+
+.ppm-display {
+    margin: 20px 0;
+}
+
+.ppm-display span {
+    font-size: clamp(45px, 9vw, 65px);
+    font-weight: bold;
+}
+
+.ppm-display small {
+    font-size: 15px;
+    color: var(--sage);
+}
+
+.status {
+    display: inline-block;
+    padding: 9px 25px;
+    background: #D8EBDD;
+    color: #245C39;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.description {
+    margin-top: 17px;
+    color: var(--sage);
+    font-size: 12px;
+}
+
+/* SENSOR GRID */
+
+.sensor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.sensor-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.sensor-card p {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.sensor-card h3 {
+    font-size: 28px;
+    margin: 12px 0 5px;
+    color: var(--dark-green);
+}
+
+.sensor-card small {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* INFORMATION */
+
+.information-card {
+    background: var(--white);
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.information-card h3 {
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: var(--dark-green);
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-row span {
+    color: var(--text-muted);
+}
+
+.info-row strong {
+    color: var(--dark-green);
+    text-align: right;
+}
+
+/* UPDATE TIME */
+
+.update-time {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 11px;
+    margin: 25px 0;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--dark-green);
+}
+
+footer p {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+footer small {
+    display: block;
+    color: var(--text-muted);
+    margin-top: 5px;
+    font-size: 11px;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 15px;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .brand h1 {
+        font-size: 25px;
+    }
+
+    .brand p {
+        font-size: 9px;
+    }
+
+    .welcome h2 {
+        font-size: 19px;
+    }
+
+    .sensor-grid {
+        gap: 10px;
+    }
+
+    .sensor-card {
+        padding: 17px;
+    }
+
+    .sensor-card h3 {
+        font-size: 23px;
+    }
+
+    .information-card {
+        padding: 18px;
+    }
+}
